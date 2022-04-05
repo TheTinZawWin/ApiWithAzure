@@ -136,17 +136,21 @@ namespace ApiWithAzure
 
             app.UseAuthorization();
 
-            app.UseStaticFiles();  
-            // Use swagger
-            app.UseSwagger();
 
-            // Add swagger UI
-            app.UseSwaggerUI(c =>
+            // If is in development
+            if (true || env.IsDevelopment() || env.IsProduction())
             {
-                c.SwaggerEndpoint("/swagger/v1.0/swagger.json", "Versioned API v1.0");
+                // Use swagger
+                app.UseSwagger();
 
-                c.DocExpansion(DocExpansion.None);
-            });
+                // Add swagger UI
+                app.UseSwaggerUI(c =>
+                {
+                    c.SwaggerEndpoint("/swagger/v1.0/swagger.json", "Versioned API v1.0");
+
+                    c.DocExpansion(DocExpansion.None);
+                });
+            }
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
