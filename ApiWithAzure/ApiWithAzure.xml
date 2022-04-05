@@ -1,0 +1,551 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ApiWithAzure</name>
+    </assembly>
+    <members>
+        <member name="T:ApiWithAzure.APIModels.APIResponse">
+            <summary>
+             Base response in case there is no data 
+            </summary>
+        </member>
+        <member name="P:ApiWithAzure.APIModels.APIResponse.Success">
+            <summary>
+            If the call was successfull
+            </summary>
+        </member>
+        <member name="P:ApiWithAzure.APIModels.APIResponse.Errors">
+            <summary>
+            The errors if not successfull
+            </summary>
+        </member>
+        <member name="M:ApiWithAzure.APIModels.APIResponse.AddError(System.String)">
+            <summary>
+            ADding an error to the error list
+            </summary>
+            <param name="error"></param>
+        </member>
+        <member name="T:ApiWithAzure.APIModels.APIResponse`1">
+            <summary>
+            Base response with data
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:ApiWithAzure.APIModels.APIResponse`1.Response">
+            <summary>
+            The response data
+            </summary>
+        </member>
+        <member name="T:ApiWithAzure.APIModels.ChangeNameAPIModel">
+            <summary>
+            The api model for changing the first and last name of a user
+            </summary>
+        </member>
+        <member name="T:ApiWithAzure.APIModels.ChangeNameAPIModel.Request">
+            <summary>
+            The request model
+            </summary>
+        </member>
+        <member name="P:ApiWithAzure.APIModels.ChangeNameAPIModel.Request.Firstname">
+            <summary>
+            The first name
+            </summary>
+            <example>firstName</example>
+        </member>
+        <member name="P:ApiWithAzure.APIModels.ChangeNameAPIModel.Request.Lastname">
+            <summary>
+            The last name
+            </summary>
+            <example>lastName</example>
+        </member>
+        <member name="T:ApiWithAzure.APIModels.ChangePasswordAPIModel">
+            <summary>
+            The api model for changin the passward
+            </summary>
+        </member>
+        <member name="T:ApiWithAzure.APIModels.ChangePasswordAPIModel.Request">
+            <summary>
+            The request model
+            </summary>
+        </member>
+        <member name="P:ApiWithAzure.APIModels.ChangePasswordAPIModel.Request.OldPassword">
+            <summary>
+            The old password
+            </summary>
+        </member>
+        <member name="P:ApiWithAzure.APIModels.ChangePasswordAPIModel.Request.NewPassword">
+            <summary>
+            The new password
+            </summary>
+        </member>
+        <member name="T:ApiWithAzure.APIModels.LoginAPIModel">
+            <summary>
+            API Model for the login
+            </summary>
+        </member>
+        <member name="T:ApiWithAzure.APIModels.LoginAPIModel.Request">
+            <summary>
+            The request model
+            </summary>
+        </member>
+        <member name="P:ApiWithAzure.APIModels.LoginAPIModel.Request.UserNameOrEmail">
+            <summary>
+            You can either use your username or email
+            </summary>
+            <example>qwer</example>
+        </member>
+        <member name="P:ApiWithAzure.APIModels.LoginAPIModel.Request.Password">
+            <summary>
+            The passward for loggin in
+            </summary>
+            <example>123123123</example>
+        </member>
+        <member name="T:ApiWithAzure.APIModels.LoginAPIModel.Response">
+            <summary>
+            The response model
+            </summary>
+        </member>
+        <member name="P:ApiWithAzure.APIModels.LoginAPIModel.Response.Token">
+            <summary>
+            The authorization token
+            </summary>
+        </member>
+        <member name="P:ApiWithAzure.APIModels.LoginAPIModel.Response.UserId">
+            <summary>
+            The id of the logged in user
+            </summary>
+        </member>
+        <member name="T:ApiWithAzure.APIModels.MemberAPIModel">
+            <summary>
+            API model for registering a new user
+            </summary>
+        </member>
+        <member name="T:ApiWithAzure.APIModels.MemberAPIModel.Request">
+            <summary>
+            The request model
+            </summary>
+        </member>
+        <member name="P:ApiWithAzure.APIModels.MemberAPIModel.Request.Name">
+            <summary>
+            request of name
+            </summary>
+        </member>
+        <member name="P:ApiWithAzure.APIModels.MemberAPIModel.Request.Email">
+            <summary>
+            request of email
+            </summary>
+        </member>
+        <member name="P:ApiWithAzure.APIModels.MemberAPIModel.Request.PhoneNo">
+            <summary>
+            request of phno
+            </summary>
+        </member>
+        <member name="P:ApiWithAzure.APIModels.MemberAPIModel.Request.Age">
+            <summary>
+            request of age
+            </summary>
+        </member>
+        <member name="T:ApiWithAzure.APIModels.MemberAPIModel.Response">
+            <summary>
+            The response model
+            </summary>
+        </member>
+        <member name="P:ApiWithAzure.APIModels.MemberAPIModel.Response.Id">
+            <summary>
+             user id
+            </summary>
+        </member>
+        <member name="P:ApiWithAzure.APIModels.MemberAPIModel.Response.Name">
+            <summary>
+             userName
+            </summary>
+        </member>
+        <member name="P:ApiWithAzure.APIModels.MemberAPIModel.Response.Email">
+            <summary>
+            user email 
+            </summary>
+        </member>
+        <member name="P:ApiWithAzure.APIModels.MemberAPIModel.Response.PhoneNo">
+             <summary>
+            user of phone no
+             </summary>
+        </member>
+        <member name="P:ApiWithAzure.APIModels.MemberAPIModel.Response.Age">
+            <summary>
+            user age
+            </summary>
+        </member>
+        <member name="T:ApiWithAzure.APIModels.RegisterAPIModel">
+            <summary>
+            API model for registering a new user
+            </summary>
+        </member>
+        <member name="T:ApiWithAzure.APIModels.RegisterAPIModel.Request">
+            <summary>
+            The request model
+            </summary>
+        </member>
+        <member name="P:ApiWithAzure.APIModels.RegisterAPIModel.Request.FirstName">
+            <summary>
+            The user name for the new user, must be unique
+            </summary>
+            <example>Test</example>
+        </member>
+        <member name="P:ApiWithAzure.APIModels.RegisterAPIModel.Request.LastName">
+            <summary>
+            The user name for the new user, must be unique
+            </summary>
+            <example>User</example>
+        </member>
+        <member name="P:ApiWithAzure.APIModels.RegisterAPIModel.Request.Email">
+            <summary>
+            The email of the new user, must be unique
+            </summary>
+            <example>testuser@gmail.com</example>
+        </member>
+        <member name="P:ApiWithAzure.APIModels.RegisterAPIModel.Request.Password">
+            <summary>
+            The passward for the new user
+            Must be more than 8 digits
+            </summary>
+        </member>
+        <member name="T:ApiWithAzure.APIModels.RegisterAPIModel.Response">
+            <summary>
+            The response model
+            </summary>
+        </member>
+        <member name="P:ApiWithAzure.APIModels.RegisterAPIModel.Response.UserName">
+            <summary>
+            The userName of the created user
+            </summary>
+        </member>
+        <member name="P:ApiWithAzure.APIModels.RegisterAPIModel.Response.FirstName">
+            <summary>
+            The userName of the created user
+            </summary>
+        </member>
+        <member name="P:ApiWithAzure.APIModels.RegisterAPIModel.Response.LastName">
+            <summary>
+            The userName of the created user
+            </summary>
+        </member>
+        <member name="P:ApiWithAzure.APIModels.RegisterAPIModel.Response.Email">
+            <summary>
+            The email of the created user
+            </summary>
+        </member>
+        <member name="T:ApiWithAzure.APIModels.SearchMemberAPIModel">
+            <summary>
+            API model for creating a room
+            </summary>
+        </member>
+        <member name="T:ApiWithAzure.APIModels.SearchMemberAPIModel.Request">
+            <summary>
+            The request model
+            </summary>
+        </member>
+        <member name="P:ApiWithAzure.APIModels.SearchMemberAPIModel.Request.Email">
+            <summary>
+            user email 
+            </summary>
+            
+        </member>
+        <member name="P:ApiWithAzure.APIModels.SearchMemberAPIModel.Request.PhoneNo">
+             <summary>
+            user of phone no
+             </summary>
+        </member>
+        <member name="T:ApiWithAzure.APIModels.SearchMemberAPIModel.Response">
+            <summary>
+            The response model
+            </summary>
+        </member>
+        <member name="P:ApiWithAzure.APIModels.SearchMemberAPIModel.Response.Id">
+            <summary>
+             user id
+            </summary>
+        </member>
+        <member name="P:ApiWithAzure.APIModels.SearchMemberAPIModel.Response.Name">
+            <summary>
+             userName
+            </summary>
+        </member>
+        <member name="P:ApiWithAzure.APIModels.SearchMemberAPIModel.Response.Email">
+            <summary>
+            user email 
+            </summary>
+        </member>
+        <member name="P:ApiWithAzure.APIModels.SearchMemberAPIModel.Response.PhoneNo">
+             <summary>
+            user of phone no
+             </summary>
+        </member>
+        <member name="P:ApiWithAzure.APIModels.SearchMemberAPIModel.Response.Age">
+            <summary>
+            user age
+            </summary>
+        </member>
+        <member name="T:ApiWithAzure.APIModels.UpdateMemberAPIModel">
+            <summary>
+            API model for creating member
+            </summary>
+        </member>
+        <member name="T:ApiWithAzure.APIModels.UpdateMemberAPIModel.Request">
+            <summary>
+            The request model
+            </summary>
+        </member>
+        <member name="P:ApiWithAzure.APIModels.UpdateMemberAPIModel.Request.Id">
+            <summary>
+             user id
+            </summary>
+        </member>
+        <member name="P:ApiWithAzure.APIModels.UpdateMemberAPIModel.Request.Name">
+            <summary>
+             userName
+            </summary>
+        </member>
+        <member name="P:ApiWithAzure.APIModels.UpdateMemberAPIModel.Request.Email">
+            <summary>
+            user email 
+            </summary>
+        </member>
+        <member name="P:ApiWithAzure.APIModels.UpdateMemberAPIModel.Request.PhoneNo">
+             <summary>
+            user of phone no
+             </summary>
+        </member>
+        <member name="P:ApiWithAzure.APIModels.UpdateMemberAPIModel.Request.Age">
+            <summary>
+            user age
+            </summary>
+        </member>
+        <member name="T:ApiWithAzure.APIModels.UpdateMemberAPIModel.Response">
+            <summary>
+            The response model
+            </summary>
+        </member>
+        <member name="P:ApiWithAzure.APIModels.UpdateMemberAPIModel.Response.Id">
+            <summary>
+             user id
+            </summary>
+        </member>
+        <member name="P:ApiWithAzure.APIModels.UpdateMemberAPIModel.Response.Name">
+            <summary>
+             userName
+            </summary>
+        </member>
+        <member name="P:ApiWithAzure.APIModels.UpdateMemberAPIModel.Response.Email">
+            <summary>
+            user email 
+            </summary>
+        </member>
+        <member name="P:ApiWithAzure.APIModels.UpdateMemberAPIModel.Response.PhoneNo">
+             <summary>
+            user of phone no
+             </summary>
+        </member>
+        <member name="P:ApiWithAzure.APIModels.UpdateMemberAPIModel.Response.Age">
+            <summary>
+            user age
+            </summary>
+        </member>
+        <member name="T:ApiWithAzure.APIModels.UserAPIModel">
+            <summary>
+            API Model to return the user information
+            </summary>
+        </member>
+        <member name="T:ApiWithAzure.APIModels.UserAPIModel.Response">
+            <summary>
+            The response model
+            </summary>
+        </member>
+        <member name="P:ApiWithAzure.APIModels.UserAPIModel.Response.Id">
+            <summary>
+            The id of the user
+            </summary>
+        </member>
+        <member name="P:ApiWithAzure.APIModels.UserAPIModel.Response.FirstName">
+            <summary>
+            THe first name of the user
+            </summary>
+        </member>
+        <member name="P:ApiWithAzure.APIModels.UserAPIModel.Response.LastName">
+            <summary>
+            The last name of the user
+            </summary>
+        </member>
+        <member name="P:ApiWithAzure.APIModels.UserAPIModel.Response.UserName">
+            <summary>
+            The user name of the user
+            </summary>
+        </member>
+        <member name="P:ApiWithAzure.APIModels.UserAPIModel.Response.Email">
+            <summary>
+            The email of the user
+            </summary>
+        </member>
+        <member name="T:ApiWithAzure.Authentication.AuthenticationExtension">
+            <summary>
+            Authentication wrappper 
+            </summary>
+        </member>
+        <member name="M:ApiWithAzure.Authentication.AuthenticationExtension.AddTokenAuthentication(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Configure the toekn authentication
+            </summary>
+            <param name="services">Service colleciton</param>
+            <param name="config">Congigeration of the API</param>
+            <returns></returns>
+        </member>
+        <member name="T:ApiWithAzure.Controllers.AuthController">
+            <summary>
+            The controller in charge of all the operation of the authentication
+            </summary>
+        </member>
+        <member name="M:ApiWithAzure.Controllers.AuthController.#ctor(Microsoft.Extensions.Configuration.IConfiguration,Microsoft.AspNetCore.Identity.SignInManager{ApiWithAzure.Data.Models.ApplicationUser},Microsoft.AspNetCore.Identity.UserManager{ApiWithAzure.Data.Models.ApplicationUser})">
+            <summary>
+            Default constrcutor
+            </summary>
+            <param name="configuration"></param>
+            <param name="signInManager"></param>
+            <param name="userManager"></param>
+        </member>
+        <member name="M:ApiWithAzure.Controllers.AuthController.Register(ApiWithAzure.APIModels.RegisterAPIModel.Request)">
+            <summary>
+            Register a new user
+            </summary>
+            <param name="requestModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiWithAzure.Controllers.AuthController.Login(ApiWithAzure.APIModels.LoginAPIModel.Request)">
+            <summary>
+             End point for loggin in using userName/Email with passward
+            </summary>
+            <param name="requestModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiWithAzure.Controllers.AuthController.TokenLogin">
+            <summary>
+            End point to check the token and generate new one if valid, and let the user in 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ApiWithAzure.Controllers.AuthController.ChangeName(ApiWithAzure.APIModels.ChangeNameAPIModel.Request)">
+            <summary>
+            End point to change or assign the first and last name for the user
+            </summary>
+            <param name="requestModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiWithAzure.Controllers.AuthController.ChangePassword(ApiWithAzure.APIModels.ChangePasswordAPIModel.Request)">
+            <summary>
+             End point to change the passward of the current user
+            </summary>
+            <param name="requestModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiWithAzure.Controllers.AuthController.GetMyInfo">
+            <summary>
+            End point to get the info of the logged in user
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ApiWithAzure.Controllers.AuthController.GenerateJSONWebToken(ApiWithAzure.Data.Models.ApplicationUser)">
+            <summary>
+            A method to generate a web token for the user
+            </summary>
+            <param name="user">The user to generate the web token for</param>
+            <returns></returns>
+        </member>
+        <member name="T:ApiWithAzure.Controllers.MemberController">
+            <summary>
+            The controller in charge of all the operation of the Member
+            </summary>
+        </member>
+        <member name="M:ApiWithAzure.Controllers.MemberController.#ctor(ApiWithAzure.Data.Model.ApplicationDbContext,Microsoft.AspNetCore.Identity.UserManager{ApiWithAzure.Data.Models.ApplicationUser})">
+            <summary>
+            Defautl constructor
+            </summary>
+            <param name="context"></param>
+            <param name="userManager"></param>
+        </member>
+        <member name="M:ApiWithAzure.Controllers.MemberController.CreateUser(ApiWithAzure.APIModels.MemberAPIModel.Request)">
+            <summary>
+            Register a new member
+            </summary>
+            <param name="requestModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiWithAzure.Controllers.MemberController.GetMemberById(System.Int32)">
+            <summary>
+            End point to get the details of a member by Id
+            </summary>
+            <param name="id">The id of the member</param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiWithAzure.Controllers.MemberController.GetMemberByUserName(ApiWithAzure.APIModels.SearchMemberAPIModel.Request)">
+            <summary>
+            End point to search for a members 
+            </summary>
+            <param name="requestModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiWithAzure.Controllers.MemberController.UpdateChore(ApiWithAzure.APIModels.UpdateMemberAPIModel.Request)">
+            <summary>
+            End point to update the member
+            </summary>
+            <param name="requestModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiWithAzure.Controllers.MemberController.DeleteMember(System.Int32)">
+            <summary>
+            End point to get the details of a member by Id
+            </summary>
+            <param name="id">The id of the member</param>
+            <returns></returns>
+        </member>
+        <member name="T:ApiWithAzure.Program">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ApiWithAzure.Program.Main(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:ApiWithAzure.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ApiWithAzure.Startup">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ApiWithAzure.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:ApiWithAzure.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:ApiWithAzure.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+        </member>
+    </members>
+</doc>
